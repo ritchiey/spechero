@@ -1,1 +1,16 @@
 require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+
+Style/StringLiterals:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Max: 50
+  Exclude:
+    - 'config/routes.rb'
+    - 'spec/**/*'
